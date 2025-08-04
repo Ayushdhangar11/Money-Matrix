@@ -1,0 +1,25 @@
+packages require for projects
+Packages installed (dev dependencies):
+Type definitions for bcrypt, cookie-parser, cors, dotenv, express, mongoose, multer, node, node-cron, passport, passport-jwt
+
+Tools: ts-node-dev, typescript
+
+npx tsc --init to create ts config file
+
+their are dev depencies present inside package.json file
+
+-------------BASIC SETUP ------------------
+
+ SO WE MADE env files that contians all the enviorment relates information 
+
+ to access the env variabe we have ./utlis/get_env.ts which will get use the key and value from env file and return it to us
+
+ then we have httpscongig - which will get the value form get_env and return it and we store them to desired varriabls
+
+ for custmoize errors we have httpsconfig where we included all the necessary code that can appear during testing
+ and also to customize error code as per our choice
+
+ then we have ./enum/errocode file which contains all the error code that can appear during testing and also to customize error code as per our
+
+ setup index.js with dotenv to bring all the env file to index.js file
+
