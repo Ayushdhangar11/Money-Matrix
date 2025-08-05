@@ -8,6 +8,7 @@ import { errorHandler } from "./middlewares/errorHandler.middleware";
 import { BadRequestException } from "./utils/app_error";
 import { asyncHandler } from "./middlewares/asyncHandler.middleware";
 import connectDatabase from "./config/db.config";
+import authRoutes from "./routes/auth.route";
 
 const app = express();
 const BASE_PATH = Env.BASE_PATH;
@@ -31,6 +32,8 @@ app.get(
         res.send("welcome to backend api");
     })
 );
+
+app.use(`${BASE_PATH}/auth`, authRoutes);
 
 app.use(errorHandler);
 
